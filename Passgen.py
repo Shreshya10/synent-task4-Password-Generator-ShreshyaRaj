@@ -65,8 +65,8 @@ def download_password(filetodownload: str) -> None:
     responses = ["y", "yes", "hell yea gng", "ye", "yes"]
 
     if response.lower() in responses:
-        with open("password.txt", "w") as file:
-            file.write(filetodownload + "\n")
+        with open("password.txt", "x") as file:
+            file.write(filetodownload)
             print("Password saved to password.txt")
     else:
         print("Password not saved, Thanks for using!")
