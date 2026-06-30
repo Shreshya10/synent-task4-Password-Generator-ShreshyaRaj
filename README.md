@@ -1,20 +1,22 @@
-# Secure Password Generator 🔒
+# Synent Task 4: Secure Password Generator 🔒
 
-A lightweight, secure command-line tool built in Python to generate strong, random passwords. 
+A lightweight, robust command-line interface (CLI) tool built in Python to generate high-entropy, random passwords. Developed as part of the Synent internship/technical track (Task 4).
 
-Unlike standard random generators, this project utilizes Python's `secrets` module to ensure true cryptographic security, guaranteeing that your passwords meet strict modern security requirements.
+This tool leverages Python's `secrets` module for cryptographically secure pseudo-random number generation (CSPRNG), ensuring passwords are safe from predictability vectors common in standard pseudo-random generators.
 
 ## ✨ Features
-* **Cryptographically Secure:** Uses `secrets` instead of `random` to prevent predictability.
-* **Guaranteed Variety:** Forces the inclusion of at least one lowercase letter, uppercase letter, number, and special character.
-* **Smart Input Validation:** Constrains password length safely between 9 and 19 characters with robust error handling.
-* **Shuffle Protection:** Thoroughly mixes character sets to eliminate predictable structural patterns.
-* **Local Storage:** (Optional) Easily extensible to append generated passwords to a local file.
+* **Cryptographic Security:** Built using the `secrets` module to ensure high-entropy randomness suitable for security credentials.
+* **Guaranteed Complexity:** Enforces the strict inclusion of at least one lowercase letter, one uppercase letter, one digit, and one special character (`string.punctuation`).
+* **Robust Input Sanitization:** Safely constrains user input between 9 and 19 characters with comprehensive `ValueError` and `TypeError` protection.
+* **Pattern Elimination:** Shuffles the generated array before joining to remove any predictability regarding character placement.
 
-## 🚀 How to Run
+## 🚀 Getting Started
 
-1. Clone this repository:
+### Prerequisites
+* Python 3.6 or higher.
+
+### Installation & Execution
+1. Clone the repository to your local machine:
    ```bash
-   git clone [https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git](https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git)
-   cd YOUR-REPO-NAME
-
+   git clone [https://github.com/Shreshya10/synent-task4-Password-Generator-ShreshyaRaj.git](https://github.com/Shreshya10/synent-task4-Password-Generator-ShreshyaRaj.git)
+   cd synent-task4-Password-Generator-ShreshyaRaj
