@@ -10,12 +10,11 @@ Should have numbers
 
 import secrets
 import string
-from random import shuffle
 
 
 def get_input() -> int:
     length: int = 0
-    while 1 + 1 == 2:
+    while True:
         try:
             length = int(input("Input Length of the password(9 - 19): ").strip())
             if length < 9 or length > 19:
@@ -53,21 +52,21 @@ def generate_password(length: int) -> str:
         )
 
     # shuffle the password to ensure randomness
-    shuffle(password)
+    secrets.SystemRandom().shuffle(password)
 
     # return the generated password as a string
     # .join converts the list of characters into a single string automatically
     return "".join(password)
 
 
-def download_password(length: int) -> None:
+def download_password(filetodownload: str) -> None:
     response = input("Do you want to save this password? (y/n)")
 
     responses = ["y", "yes", "hell yea gng", "ye", "yes"]
 
     if response.lower() in responses:
-        with open("password.txt", "x") as file:
-            file.write(generate_password(length))
+        with open("password.txt", "w") as file:
+            file.write(filetodownload + "\n")
             print("Password saved to password.txt")
     else:
         print("Password not saved, Thanks for using!")
@@ -75,8 +74,9 @@ def download_password(length: int) -> None:
 
 def main():
     passlen: int = get_input()
-    print(f"\n{generate_password(passlen)}\n")
-    download_password(passlen)
+    finalpassword: str = generate_password(passlen)
+    print(f"\n{finalpassword}\n")
+    download_password(finalpassword)
 
 
 if __name__ == "__main__":
