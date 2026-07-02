@@ -15,8 +15,3 @@ This tool leverages Python's `secrets` module for cryptographically secure pseud
 ### Prerequisites
 * Python 3.6 or higher.
 
-### Installation & Execution
-1. Clone the repository to your local machine:
-   ```bash
-   git clone [https://github.com/Shreshya10/synent-task4-Password-Generator-ShreshyaRaj.git](https://github.com/Shreshya10/synent-task4-Password-Generator-ShreshyaRaj.git)
-   cd synent-task4-Password-Generator-ShreshyaRaj
